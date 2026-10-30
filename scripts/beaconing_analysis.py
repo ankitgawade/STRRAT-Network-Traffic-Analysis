@@ -9,7 +9,8 @@ timestamps = []
 for pkt in packets:
     if IP in pkt and TCP in pkt and Raw in pkt:
         if (pkt[IP].src == "172.16.1.66"
-            and pkt[IP].dst == "141.98.10.79"):
+            and pkt[IP].dst == "141.98.10.79"
+            and pkt[IP].dport ==12132 ):
 
             payload = bytes(pkt[Raw].load)
 

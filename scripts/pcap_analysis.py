@@ -82,6 +82,15 @@ print("TOP DESTINATION IP ADDRESSES")
 print("==============================")
 
 for ip, count in destination_ip_count.most_common(10):
+    print(ip, ":", count)
+
+
+print("\n==============================")
+print("MOST FREQUENT CONNECTIONS")
+print("==============================")
+
+for connection, count in connection_count.most_common(10):
+
     print(connection, ":", count)
 
 print("\n==============================")
